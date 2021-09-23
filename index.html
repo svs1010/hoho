@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> trabajo </title>
+</head>
+<style type="text/css">
+	.a
+	{
+      position: absolute;
+      width: 600px;
+      height: 100px;
+      background-color: red;
+      left: 500px;
+      top: 80px;
+      text-align: center;
+      font-size: 50px;
+      font-size: 60px;
+	}
+	.b
+	{
+	  position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      left: 800px;
+      top: 80px;
+      border-radius: 100px;
+	}
+	.c
+	{
+		position: absolute;
+		width: 600px;
+		height: 500px;
+		left: 500px;
+		top: 200px;
+		background-color: blue;
+		text-align: center;
+        font-size: 50px;
+	}
+	.n
+	{
+
+	}
+	.d
+	{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		left: 100px;
+		top: 300px;
+		background-color: red;
+	}
+	.e
+	{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		left: 100px;
+		top: 500px;
+		background-color: red;
+	}
+	.fondo
+{
+    box-shadow: 0px 0px 8px 15px #545454 ;
+	left: 0px;
+	position: absolute;
+	background-color: cyan;
+	top: 0px;
+	width: 1600px;
+	height: 750px;
+	background-size: cover;
+	opacity: 1;
+}
+.f
+{
+	position: absolute;
+	width: 600px;
+	height: 100px;
+	background-color: red;
+	left: 500px;
+	top: 550px;
+}
+</style>
+<body >
+<div class="fondo" onmousemove="info(event)"></div>	
+<div class="a" onclick="pri()" onmousemove="info(event)">Neosistemas</div>
+<div class="n" id="su" onmousemove="info(event)" ></div>
+<div class="n" id="sa" onmousemove="info(event)"> </div>
+<div class="d" onclick="secu()" onmousemove="info(event)"></div>
+<div class="e" onmousemove="info(event)" onclick="fufa()"></div>
+<div class="n" id="hosa">HOLA</div>
+<script type="text/javascript">
+	var sama;
+	var suma;
+	var n = document.getElementById('su'); 
+	var n1 = document.getElementById('sa'); 
+	var n2 = document.getElementById('hosa'); 
+	function pri() 
+	{
+		sama = setTimeout(cu, 3000);
+	}
+	function cu() 
+	{
+		n.className = "b";
+		n1.className = "c";
+		sama = setTimeout(vol, 3000);
+		sama = setTimeout(vol1, 6000);
+	}
+	function vol() 
+	{
+		n.className = "n";
+		document.getElementById("sa").innerHTML = "ESTOY DENTRO";
+	}
+	function vol1() 
+	{
+		n1.className = "n";
+		document.getElementById("sa").innerHTML = "H";
+	}
+	function secu() 
+	{
+		n1.className = "c";
+	}
+	function info(event) 
+	{
+		var x = event.clientX;
+        var y = event.clientY;
+        if (x>503&&y>200&&x<1099&&y<699) 
+        {
+             document.getElementById("sa").innerHTML = "ESTOY DENTRO";
+        }
+        else
+        {
+        	document.getElementById("sa").innerHTML = "NO ESTOY DENTRO";
+        }	
+	}
+	function fufa() 
+	{
+		suma = setTimeout(fufa1, 1000);
+	}
+	function fufa1() 
+	{
+		n2.className = "f";
+	}
+</script>
+</body>
+</html>
